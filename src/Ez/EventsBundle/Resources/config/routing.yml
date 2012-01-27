@@ -1,0 +1,4 @@
+EzEventsBundle:
+    resource: "@EventsBundle/Controller/"
+    type: annotation
+    prefix: /

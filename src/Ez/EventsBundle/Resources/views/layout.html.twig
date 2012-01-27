@@ -1,0 +1,50 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{%  block title 'Events' %}</title>
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="{{ asset('bundles/events/css/style.css') }}">
+  {%  block extra_stylesheets %}{% endblock %}
+
+  <script src="{{ asset('bundles/events/js/libs/modernizr-2.0.6.min.js') }}"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    
+    <div id="main" role="main">
+		{% block content %}{% endblock %}
+    </div>
+    
+    <footer>
+
+    </footer>
+  </div> <!-- end container -->
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="{{ asset('bundles/events/js/libs/jquery-1.6.2.min.js') }}"><\/script>')</script>
+
+
+  <script defer src="{{ asset('js/script.js') }}"></script>
+  {% block extra_scripts %}{% endblock %}
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

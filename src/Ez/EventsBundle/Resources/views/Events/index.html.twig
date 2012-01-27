@@ -1,0 +1,22 @@
+{% extends 'EventsBundle::layout.html.twig' %}
+
+{% block header %}
+  <h1>{% trans %}events.index.title{% endtrans %}</h1>
+  <h2>{% trans %}events.index.subtitle{% endtrans %}</h2>
+{% endblock %}
+
+{% block content %}
+  
+  {% for event in events %}
+      <article class="event clearfix">
+          <div class="image">
+              <img />
+          </div>
+          <div class="content">
+              <h3>{{ event.title }}</h3>
+              <p>{{ event.description }}</p>
+          </div>
+      </article>  
+  {% endfor %}
+
+{% endblock %}
